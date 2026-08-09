@@ -1,7 +1,7 @@
 export const demoConcepts = [
   {
     slug: "restaurant-cafe",
-    title: "Maison Sépia",
+    title: "Atelier Moka",
     category: "Restaurant & café",
     description: "Une table de quartier chaleureuse, portée par une cuisine de saison et une atmosphère feutrée.",
     image: "/images/demos/restaurant-cafe/cover.svg",
@@ -10,7 +10,7 @@ export const demoConcepts = [
   },
   {
     slug: "patisserie",
-    title: "Pollen",
+    title: "Maison Eclat",
     category: "Pâtisserie",
     description: "Une pâtisserie contemporaine aux couleurs délicates et aux créations très graphiques.",
     image: "/images/demos/patisserie/cover.svg",
@@ -19,7 +19,7 @@ export const demoConcepts = [
   },
   {
     slug: "fast-food",
-    title: "Braise Club",
+    title: "Smash District",
     category: "Fast-food",
     description: "Un comptoir urbain franc, généreux et rythmé, pensé pour donner faim dès le premier écran.",
     image: "/images/demos/fast-food/cover.svg",

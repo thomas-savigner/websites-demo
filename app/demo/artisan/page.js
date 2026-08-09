@@ -1,2 +1,3 @@
-import ConceptPlaceholder from "@/components/demos/shared/ConceptPlaceholder";
-export default function Page() { return <ConceptPlaceholder title="Atelier Noroît" category="Artisan" accent="#55705f" />; }
+import ArtisanSite from "@/components/demos/artisan/ArtisanSite";
+export const metadata = { title: "Atelier Habitat — Rénovation intérieure" };
+export default function Page() { return <ArtisanSite />; }
