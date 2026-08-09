@@ -1,2 +1,10 @@
-import ConceptPlaceholder from "@/components/demos/shared/ConceptPlaceholder";
-export default function Page() { return <ConceptPlaceholder title="Pilote" category="Dashboard" accent="#6b56b3" />; }
+import OpsFlowDashboard from "@/components/demos/dashboard/OpsFlowDashboard";
+
+export const metadata = {
+  title: "OpsFlow — Vue d’ensemble",
+  description: "Interface métier fictive de pilotage des opérations d’une PME.",
+};
+
+export default function Page() {
+  return <OpsFlowDashboard />;
+}

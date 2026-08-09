@@ -1,2 +1,10 @@
-import ConceptPlaceholder from "@/components/demos/shared/ConceptPlaceholder";
-export default function Page() { return <ConceptPlaceholder title="Lumen" category="Landing page" accent="#ca7133" />; }
+import DevisFlowLanding from "@/components/demos/landing/DevisFlowLanding";
+
+export const metadata = {
+  title: "DevisFlow — Tes devis, simplement",
+  description: "Concept fictif d’un outil de création, d’envoi et de suivi de devis commerciaux.",
+};
+
+export default function Page() {
+  return <DevisFlowLanding />;
+}

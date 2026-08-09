@@ -37,12 +37,12 @@ export const demoConcepts = [
   },
   {
     slug: "consultant",
-    title: "Élan Conseil",
+    title: "Horizon Conseil",
     category: "Consultant",
-    description: "Une présence claire et confiante pour présenter une expertise sans langage inutilement complexe.",
+    description: "Une présence claire et confiante pour structurer l’organisation et le pilotage des petites entreprises.",
     image: "/images/demos/consultant/cover.svg",
-    color: "#4358a6",
-    tone: "Calme & assuré",
+    color: "#153943",
+    tone: "Clair & pragmatique",
   },
   {
     slug: "pme-b2b",
@@ -64,11 +64,11 @@ export const demoConcepts = [
   },
   {
     slug: "landing",
-    title: "Lumen",
+    title: "DevisFlow",
     category: "Landing page",
-    description: "Une page de lancement lumineuse, concise et rythmée autour d'une proposition forte.",
+    description: "Un outil clair et direct pour créer, envoyer et suivre ses devis commerciaux.",
     image: "/images/demos/landing/cover.svg",
-    color: "#ca7133",
-    tone: "Net & expressif",
+    color: "#3156f5",
+    tone: "Direct & performant",
   },
 ];
