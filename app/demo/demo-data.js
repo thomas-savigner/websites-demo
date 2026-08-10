@@ -1,6 +1,6 @@
 export const demoConcepts = [
   {
-    slug: "restaurant-cafe",
+    slug: "atelier-moka",
     title: "Atelier Moka",
     category: "Restaurant & café",
     description: "Une table de quartier chaleureuse, portée par une cuisine de saison et une atmosphère feutrée.",
@@ -9,7 +9,7 @@ export const demoConcepts = [
     tone: "Clair & éditorial",
   },
   {
-    slug: "patisserie",
+    slug: "maison-eclat",
     title: "Maison Eclat",
     category: "Pâtisserie",
     description: "Une pâtisserie contemporaine aux couleurs délicates et aux créations très graphiques.",
@@ -18,7 +18,7 @@ export const demoConcepts = [
     tone: "Doux & précis",
   },
   {
-    slug: "fast-food",
+    slug: "smash-district",
     title: "Smash District",
     category: "Fast-food",
     description: "Un comptoir urbain franc, généreux et rythmé, pensé pour donner faim dès le premier écran.",
@@ -27,7 +27,7 @@ export const demoConcepts = [
     tone: "Direct & vibrant",
   },
   {
-    slug: "artisan",
+    slug: "atelier-noroit",
     title: "Atelier Noroît",
     category: "Artisan",
     description: "Un univers tactile et rassurant qui valorise le geste, la matière et le travail bien fait.",
@@ -36,7 +36,7 @@ export const demoConcepts = [
     tone: "Brut & humain",
   },
   {
-    slug: "consultant",
+    slug: "horizon-conseil",
     title: "Horizon Conseil",
     category: "Consultant",
     description: "Une présence claire et confiante pour structurer l’organisation et le pilotage des petites entreprises.",
@@ -45,7 +45,7 @@ export const demoConcepts = [
     tone: "Clair & pragmatique",
   },
   {
-    slug: "pme-b2b",
+    slug: "orbe-industrie",
     title: "Orbe Industrie",
     category: "PME B2B",
     description: "Une vitrine solide et technique qui rend une activité industrielle immédiatement compréhensible.",
@@ -54,7 +54,7 @@ export const demoConcepts = [
     tone: "Fiable & structuré",
   },
   {
-    slug: "dashboard",
+    slug: "pilote",
     title: "Pilote",
     category: "Dashboard",
     description: "Une interface métier lisible où les données clés deviennent évidentes au premier regard.",
@@ -63,7 +63,7 @@ export const demoConcepts = [
     tone: "Dense & fluide",
   },
   {
-    slug: "landing",
+    slug: "devisflow",
     title: "DevisFlow",
     category: "Landing page",
     description: "Un outil clair et direct pour créer, envoyer et suivre ses devis commerciaux.",
