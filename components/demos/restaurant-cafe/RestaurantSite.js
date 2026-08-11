@@ -128,26 +128,6 @@ export default function RestaurantSite() {
           </div>
         </section>
 
-        <section id="boissons" className="scroll-mt-20 bg-[#e8ddcf] px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
-          <div className="mx-auto max-w-[1440px]">
-            <Reveal><SectionHeading kicker="Nos boissons">Cafés, thés et jus maison</SectionHeading></Reveal>
-            <Reveal className="mt-12 mb-8 grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-4" stagger={0.09}>
-              {dishes.map(([name, description, price], index) => (
-                <article key={name} data-reveal-item className="group">
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-t-[9rem] rounded-b-2xl bg-[#ddcdbd]">
-                    <Image src={images.dishes[index]} alt={name} fill sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw" className="object-cover transition duration-700 ease-out group-hover:scale-[1.035]" />
-                  </div>
-                  <div className="mt-5 flex items-start justify-between gap-4"><div><h3 className="font-serif text-2xl">{name}</h3><p className="mt-2 text-sm leading-6 text-[#6e625c]">{description}</p></div><span className="shrink-0 pt-1 font-semibold text-[#a64f35]">{price}</span></div>
-                </article>
-              ))}
-            </Reveal>
-            <div className="mt-10 text-center">
-              <ButtonLink href="/demo/atelier-moka/carte" >Découvrir la carte</ButtonLink>
-            </div>
-          </div>
-        </section>
-
-
         <section id="cuisine" className="scroll-mt-20 bg-[#302925] px-5 py-20 text-white sm:px-8 sm:py-28 lg:px-10">
           <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
             <Reveal className="relative min-h-[520px] overflow-hidden rounded-[2px_120px_2px_2px]"><Image src={images.interior} alt="L’intérieur vivant de l’Atelier Moka" fill sizes="(max-width: 1023px) 100vw, 50vw" className="object-cover" /></Reveal>
