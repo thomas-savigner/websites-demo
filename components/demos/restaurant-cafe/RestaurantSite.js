@@ -41,7 +41,7 @@ function ButtonLink({ href, children, light = false, outline = false }) {
           ? "border border-white/50 text-white hover:border-white hover:bg-white hover:text-[#26211e]"
           : light
             ? "bg-[#f6f0e6] text-[#2b211d] hover:bg-white"
-            : "bg-[#a64f35] text-white hover:bg-[#8f402b]"
+            : "bg-[#a64f35] text-white hover:bg-[#8f402b]" 
       }`}
     >
       {children}
@@ -104,7 +104,7 @@ export default function RestaurantSite() {
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-[#f0b49b]">Café · Cuisine · Paris 11e</p>
               <h1 className="text-balance font-serif text-5xl leading-[0.98] tracking-[-0.055em] sm:text-7xl lg:text-[5.8rem]">Le café de quartier où l’on prend vraiment le temps.</h1>
               <p className="mt-6 max-w-2xl text-base leading-7 text-white/80 sm:text-lg">Du café de spécialité, une cuisine de saison et des brunchs généreux dans une atmosphère chaleureuse au cœur de Paris.</p>
-              <div className="mt-8 flex flex-wrap gap-3"><ButtonLink href="#carte" light>Découvrir la carte</ButtonLink><ButtonLink href="#contact" outline>Réserver</ButtonLink></div>
+              <div className="mt-8 flex flex-wrap gap-3"><ButtonLink href="/demo/atelier-moka/carte" light>Découvrir la carte</ButtonLink><ButtonLink href="#contact" outline>Réserver</ButtonLink></div>
             </div>
             <div className="mt-10 flex flex-wrap gap-x-7 gap-y-2 border-t border-white/25 pt-5 text-sm text-white/80"><span><i className="mr-2 inline-block size-2 rounded-full bg-[#d99275]" />Ouvert aujourd’hui · 8h — 22h</span><span>Paris 11e</span></div>
           </Reveal>
@@ -113,7 +113,25 @@ export default function RestaurantSite() {
         <section id="carte" className="scroll-mt-20 px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
           <div className="mx-auto max-w-[1440px]">
             <Reveal><SectionHeading kicker="Nos incontournables">À la carte aujourd’hui</SectionHeading></Reveal>
-            <Reveal className="mt-12 grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-4" stagger={0.09}>
+            <Reveal className="mt-12 mb-8 grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-4" stagger={0.09}>
+              {dishes.map(([name, description, price], index) => (
+                <article key={name} data-reveal-item className="group">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-t-[9rem] rounded-b-2xl bg-[#ddcdbd]">
+                    <Image src={images.dishes[index]} alt={name} fill sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw" className="object-cover transition duration-700 ease-out group-hover:scale-[1.035]" />
+                  </div>
+                  <div className="mt-5 flex items-start justify-between gap-4"><div><h3 className="font-serif text-2xl">{name}</h3><p className="mt-2 text-sm leading-6 text-[#6e625c]">{description}</p></div><span className="shrink-0 pt-1 font-semibold text-[#a64f35]">{price}</span></div>
+                </article>
+              ))}
+              
+            </Reveal>
+            <div className="mt-10 text-center"><ButtonLink href="/demo/atelier-moka/carte" >Découvrir la carte</ButtonLink></div>
+          </div>
+        </section>
+
+        <section id="boissons" className="scroll-mt-20 bg-[#e8ddcf] px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+          <div className="mx-auto max-w-[1440px]">
+            <Reveal><SectionHeading kicker="Nos boissons">Cafés, thés et jus maison</SectionHeading></Reveal>
+            <Reveal className="mt-12 mb-8 grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-4" stagger={0.09}>
               {dishes.map(([name, description, price], index) => (
                 <article key={name} data-reveal-item className="group">
                   <div className="relative aspect-[4/5] overflow-hidden rounded-t-[9rem] rounded-b-2xl bg-[#ddcdbd]">
@@ -123,8 +141,12 @@ export default function RestaurantSite() {
                 </article>
               ))}
             </Reveal>
+            <div className="mt-10 text-center">
+              <ButtonLink href="/demo/atelier-moka/carte" >Découvrir la carte</ButtonLink>
+            </div>
           </div>
         </section>
+
 
         <section id="cuisine" className="scroll-mt-20 bg-[#302925] px-5 py-20 text-white sm:px-8 sm:py-28 lg:px-10">
           <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
