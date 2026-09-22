@@ -1,19 +1,20 @@
 
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import Header from "./Header";
 import Reveal from "@/components/demos/shared/Reveal";
 
 const images = {
-  hero: "/images/demos/restaurant-cafe/hero.jpg",
-  interior: "/images/demos/restaurant-cafe/interior.jpg",
+  hero: getAssetPath("/images/demos/restaurant-cafe/hero.jpg"),
+  interior: getAssetPath("/images/demos/restaurant-cafe/interior.jpg"),
   dishes: [
-    "/images/demos/restaurant-cafe/dish-1.jpg",
-    "/images/demos/restaurant-cafe/dish-2.jpg",
-    "/images/demos/restaurant-cafe/dish-3.jpg",
-    "/images/demos/restaurant-cafe/coffee.jpg",
+    getAssetPath("/images/demos/restaurant-cafe/dish-1.jpg"),
+    getAssetPath("/images/demos/restaurant-cafe/dish-2.jpg"),
+    getAssetPath("/images/demos/restaurant-cafe/dish-3.jpg"),
+    getAssetPath("/images/demos/restaurant-cafe/coffee.jpg"),
   ],
-  gallery: [1, 2, 3, 4].map((number) => `/images/demos/restaurant-cafe/gallery-${number}.jpg`),
+  gallery: [1, 2, 3, 4].map((number) => getAssetPath(`/images/demos/restaurant-cafe/gallery-${number}.jpg`)),
 };
 
 const dishes = [

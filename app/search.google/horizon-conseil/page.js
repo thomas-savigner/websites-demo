@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import { demoConcepts } from "@/app/demo/demo-data";
 
@@ -240,7 +241,7 @@ function HorizonConseilResult() {
           <p className="mt-2 text-sm text-[#4d5156]"><strong className="font-medium text-[#202124]">Interventions à Paris et à distance</strong> · Disponible aujourd’hui jusqu’à 18:30</p>
         </div>
         <Link href="/demo/horizon-conseil" className="relative hidden h-[92px] overflow-hidden rounded-lg sm:block" aria-label="Voir le site Horizon Conseil">
-          <Image src={`/images/demos/consultant/about.jpg`} alt={`Aperçu de ${horizonConseil.title}`} fill sizes="116px" className="object-cover" />
+          <Image src={getAssetPath(`/images/demos/consultant/about.jpg`)} alt={`Aperçu de ${horizonConseil.title}`} fill sizes="116px" className="object-cover" />
         </Link>
       </div>
       <div className="mt-3 flex gap-5 text-sm text-[#1a0dab]">

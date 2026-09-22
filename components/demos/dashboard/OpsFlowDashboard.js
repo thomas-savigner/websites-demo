@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import { useState } from "react";
 
-const base = "/images/demos/dashboard/";
+const base = getAssetPath("/images/demos/dashboard/");
 
 const navItems = [
   ["overview", "Vue d’ensemble"], ["clients", "Clients"], ["projects", "Projets"],

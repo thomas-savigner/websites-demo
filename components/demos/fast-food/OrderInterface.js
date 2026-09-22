@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-const base = "/images/demos/fast-food/";
+const base = getAssetPath("/images/demos/fast-food/");
 
 const formats = [
   { id: "solo", name: "Menu Solo", description: "Burger + frites", price: 15.9, includesDrink: false },
@@ -50,7 +51,7 @@ function ChoiceCard({ item, selected, onSelect, type }) {
     >
       {item.image ? (
         <div className="relative aspect-[4/3] overflow-hidden">
-          <Image src={item.image} alt="" fill sizes="(max-width: 767px) 50vw, 240px" className="object-cover transition duration-300 group-hover:scale-105" />
+          <Image src={getAssetPath(item.image)} alt="" fill sizes="(max-width: 767px) 50vw, 240px" className="object-cover transition duration-300 group-hover:scale-105" />
           <span className={`absolute right-2 top-2 grid size-7 place-items-center border-2 text-sm font-black ${selected ? "border-black bg-black text-[#ff4b20]" : "border-white bg-black/70"}`}>
             {selected ? "✓" : "+"}
           </span>
@@ -76,7 +77,7 @@ function ProductRow({ product, onAdd, type }) {
     <article className="flex min-h-28 overflow-hidden border-2 border-black bg-[#fff4de]">
       {product.image ? (
         <div className="relative w-28 shrink-0 sm:w-32">
-          <Image src={product.image} alt="" fill sizes="128px" className="object-cover" />
+          <Image src={getAssetPath(product.image)} alt="" fill sizes="128px" className="object-cover" />
         </div>
       ) : (
         <div className="grid w-24 shrink-0 place-items-center bg-black text-xl font-black italic text-[#ff4b20] sm:w-28">

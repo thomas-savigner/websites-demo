@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import Reveal from "@/components/demos/shared/Reveal";
 
-const base = "/images/demos/consultant/";
+const base = getAssetPath("/images/demos/consultant/");
 
 const services = [
   ["Diagnostic organisationnel", "Identifier les blocages et les priorités."],

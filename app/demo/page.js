@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import CtaButton from "@/components/demos/shared/CtaButton";
 import DemoFooter from "@/components/demos/shared/DemoFooter";
@@ -53,7 +54,7 @@ export default function DemoIndexPage() {
                   <article>
                     <div className="relative aspect-[16/10] overflow-hidden bg-[#dedbd3]">
                       <Image
-                        src={concept.image}
+                        src={getAssetPath(concept.image)}
                         alt={`Aperçu graphique du concept ${concept.title}`}
                         fill
                         sizes="(max-width: 767px) 100vw, 50vw"

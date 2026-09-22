@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import { demoConcepts } from "@/app/demo/demo-data";
 
@@ -240,7 +241,7 @@ function MaisonEclatResult() {
           <p className="mt-2 text-sm text-[#4d5156]"><strong className="font-medium text-[#202124]">18 rue du Faubourg, Paris 9e</strong> · Ouvert aujourd’hui jusqu’à 19:30</p>
         </div>
         <Link href="/demo/maison-eclat" className="relative hidden h-[92px] overflow-hidden rounded-lg sm:block" aria-label="Voir le site Maison Eclat">
-          <Image src={`/images/demos/patisserie/boutique.jpg`} alt={`Aperçu de ${maisonEclat.title}`} fill sizes="116px" className="object-cover" />
+          <Image src={getAssetPath(`/images/demos/patisserie/boutique.jpg`)} alt={`Aperçu de ${maisonEclat.title}`} fill sizes="116px" className="object-cover" />
         </Link>
       </div>
       <div className="mt-3 flex gap-5 text-sm text-[#1a0dab]">

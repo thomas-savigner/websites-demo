@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import Reveal from "@/components/demos/shared/Reveal";
 
-const base = "/images/demos/fast-food/";
+const base = getAssetPath("/images/demos/fast-food/");
 const burgers = [["District Original","Double smash, cheddar, pickles, sauce District","12,90 €"],["Hot One","Double smash, cheddar, jalapeños, sauce spicy","13,90 €"],["Chicken Crunch","Poulet croustillant, coleslaw, sauce maison","12,50 €"],["Veggie Melt","Galette végétale, cheddar, pickles, oignons","11,90 €"]];
 const reviews = [["Alex","Enfin un burger simple, croustillant et vraiment généreux."],["Mélanie","Service rapide et le Hot One est incroyable."],["Sam","Les frites maison font clairement la différence."]];
 const CTA = ({href,children,invert=false}) => <Link href={href} className={`inline-flex min-h-12 items-center justify-center border-2 border-[#ff4b20] px-6 text-sm font-black uppercase tracking-wide transition hover:-translate-y-1 ${invert ? "bg-[#ff4b20] text-black hover:bg-[#ff6a43]" : "text-[#ff4b20] hover:bg-[#ff4b20] hover:text-black"}`}>{children}</Link>;

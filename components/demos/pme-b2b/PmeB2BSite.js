@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import Reveal from "@/components/demos/shared/Reveal";
 
-const base = "/images/demos/pme-b2b/";
+const base = getAssetPath("/images/demos/pme-b2b/");
 
 const services = [
   ["Optimisation des processus", "Cartographier, simplifier et fiabiliser les opérations."],

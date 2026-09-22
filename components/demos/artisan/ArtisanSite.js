@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import Reveal from "@/components/demos/shared/Reveal";
 
-const base="/images/demos/artisan/";
+const base=getAssetPath("/images/demos/artisan/");
 const services=[["Rénovation complète","Appartement, maison ou local professionnel."],["Cuisine & salle de bain","Rénovation et remise aux normes."],["Peinture & finitions","Préparation, peinture et finitions intérieures."],["Aménagement","Cloisons, rangements et optimisation des espaces."]];
 const projects=[["Appartement Bastille","Rénovation complète · 72 m²"],["Studio Montmartre","Optimisation & rénovation · 28 m²"],["Maison Vincennes","Pièces de vie · 95 m²"]];
 const reviews=[["Laurent","Planning respecté, chantier propre et aucune surprise sur la facture."],["Sophie","Très bon suivi du début à la fin de notre rénovation."],["Mehdi","Un vrai confort d'avoir le même interlocuteur pendant tout le chantier."]];

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import { demoConcepts } from "@/app/demo/demo-data";
 
@@ -240,7 +241,7 @@ function AtelierResult() {
           <p className="mt-2 text-sm text-[#4d5156]"><strong className="font-medium text-[#202124]">24 rue des Ateliers, Paris 11e</strong> · Ouvert aujourd’hui jusqu’à 22:00</p>
         </div>
         <Link href="/demo/atelier-moka" className="relative hidden h-[92px] overflow-hidden rounded-lg sm:block" aria-label="Voir le site Atelier Moka">
-          <Image src={`/images/demos/restaurant-cafe/hero.jpg`} alt={`Aperçu de ${atelierMoka.title}`} fill sizes="116px" className="object-cover" />
+          <Image src={getAssetPath`/images/demos/restaurant-cafe/hero.jpg`} alt={`Aperçu de ${atelierMoka.title}`} fill sizes="116px" className="object-cover" />
         </Link>
       </div>
       <div className="mt-3 flex gap-5 text-sm text-[#1a0dab]">

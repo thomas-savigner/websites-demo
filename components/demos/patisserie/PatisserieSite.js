@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import Reveal from "@/components/demos/shared/Reveal";
 
-const base = "/images/demos/patisserie/";
+const base = getAssetPath("/images/demos/patisserie/");
 const products = [
   ["Éclat Chocolat", "Mousse chocolat noir, praliné noisette, biscuit croustillant", "8,50 €"],
   ["Nuage Framboise", "Framboise, vanille de Madagascar, biscuit amande", "8 €"],

@@ -1,6 +1,7 @@
 
 
 import Image from "next/image";
+import { getAssetPath } from "@/lib/getAssetPath";
 import Link from "next/link";
 import Header from "@/components/demos/restaurant-cafe/Header";
 import CategoryLinks from "@/components/demos/restaurant-cafe/CategoryLinks";
@@ -11,7 +12,7 @@ export const metadata = {
     description: "Cafés de spécialité, thés, petit déjeuner et brunch à l’Atelier Moka, Paris 11e.",
 };
 
-const heroImage = "/images/demos/restaurant-cafe/carte-hero.png";
+const heroImage = getAssetPath("/images/demos/restaurant-cafe/carte-hero.png");
 
 function MenuItem({ item }) {
     return (
