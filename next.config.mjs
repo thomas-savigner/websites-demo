@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-const isGithubPages = process.env.GITHUB_ACTIONS === 'true';
+const isGithubPagesBuild =
+  process.env.NODE_ENV === 'production' &&
+  process.env.GITHUB_ACTIONS === 'true';
 
 const repo = 'websites-demo';
 
-const basePath = isGithubPages ? `/${repo}` : '';
+const basePath = isGithubPagesBuild ? `/${repo}` : '';
 
 const nextConfig = {
   output: 'export',
