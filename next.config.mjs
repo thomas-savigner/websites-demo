@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const isGithubPages = process.env.GITHUB_ACTIONS === 'true';
 
-const repo = websites-demo;
+const repo = "websites-demo";
 
 const nextConfig = {
   output: 'export',
